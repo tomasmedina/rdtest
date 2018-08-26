@@ -1,5 +1,5 @@
 $('.tableRow').on('click',function(event){
-    console.log($(this).attr('data-href'));
+
     window.open($(this).attr('data-href'));
 });
 
@@ -15,7 +15,6 @@ $('.deleteArticle').on('click',function(event){
         },
         success: function (response) {
 
-            console.log(response);
             if(response == "OK"){
                 btn.parent().parent().remove();
             }

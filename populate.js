@@ -4,7 +4,7 @@ var data = 'http://hn.algolia.com/api/v1/search_by_date?query=nodejs';
 const mongoose = require('mongoose');
 mongoose.connect(url);
 
-var News = mongoose.model('News',{
+const News = mongoose.model('News',{
     title:String,
     story_title:String,
     url:String,
@@ -23,7 +23,7 @@ request(data,function(error,response,body){
     var news = JSON.parse(body);
     
     mongoose.connection.db.collection('news').count(function(err, count){
-
+      console.log(count);
       if(count == 0){
         console.log("this collection is empty");
         for(var i in news.hits){
@@ -58,11 +58,11 @@ request(data,function(error,response,body){
 
         }
         console.log("Finished adding the articles, to add new ones please run the app.js file");
-        return process.exit();
+
       }
       else{
         console.log("To add new data please run the app.js file");
-        return process.exit();
+
       }
     })
 
