@@ -39,11 +39,17 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
+#.DS_Store
+.DS_Store
+
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
+
+#vsCode launch.json
+launch.json
 
 # Optional REPL history
 .node_repl_history

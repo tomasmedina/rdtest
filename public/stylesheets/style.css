@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#eee;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+table{
+  width:100%;
+}
+
+.table td{
+  vertical-align: middle;
+}
+
+.tableRow:hover{
+  background-color: #fafafa;
+  cursor:pointer;
+}
+
+.storyTitle, .time{
+  color:#333;
+  font-size:13pt;
+}
+
+.author{
+  color:#999;
+}

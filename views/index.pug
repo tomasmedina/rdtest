@@ -1,0 +1,35 @@
+extends layout
+
+
+block content
+  h1= title
+  h3=subtitle
+
+  br
+  div
+    table(class='table table-stripped table-hover')
+      tbody
+        each a in test2
+          tr(class='tableRow' data-href=a.url data-id=a.storyId)
+            if a.title
+              td
+                text(class='storyTitle') #{a.title}
+                text(class='author')   - #{a.author} -
+              td(class='time') #{a.time}
+              td 
+                button(class='btn btn-danger deleteArticle')
+                  i(class="fas fa-trash-alt")
+            else if a.story_title
+              td(class='storyTitle') #{a.story_title}
+                text(class='author')   - #{a.author} -
+              td(class='time') #{a.time}
+              td 
+                button(class='btn btn-danger deleteArticle')
+                  i(class="fas fa-trash-alt")
+            
+            else 
+              - continue
+
+  
+            
+
